@@ -1,0 +1,487 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f5f5;
+    font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+}
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.woff2?t=1677925824980') format('woff2'),
+        url('../font/iconfont.woff?t=1677925824980') format('woff'),
+        url('../font/iconfont.ttf?t=1677925824980') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 版心 */
+.w {
+    width: 1226px;
+    margin: 0 auto;
+}
+
+/* 头部导航栏区域样式 */
+.head-nav {
+    height: 40px;
+    background-color: #333333;
+}
+
+.head-nav nav {
+    float: left;
+    margin-top: 13px;
+}
+
+.head-nav nav ul li {
+    float: left;
+    padding: 0 8px;
+    height: 14px;
+    line-height: 14px;
+    border-right: 1px solid #423f39;
+}
+
+.head-nav nav ul li:first-child {
+    padding-left: 0;
+}
+
+.head-nav nav ul li:nth-child(13),
+.head-nav nav ul li:last-child {
+    /* 给最后一个孩子和第13个孩子去掉右边框 */
+    border: 0;
+}
+
+.head-nav nav ul li:nth-child(13) {
+    margin-right: 143px;
+}
+
+.head-nav nav ul li a {
+    display: block;
+    height: 12px;
+    color: #b0b0b0;
+    font-size: 12px;
+}
+
+.head-nav nav ul li a:hover {
+    color: #fff;
+}
+
+.head-nav .cart-box {
+    /* 给父盒子加相对定位 */
+    position: relative;
+    float: right;
+    width: 122px;
+    height: 40px;
+    color: #b0b0b0;
+    font-size: 12px;
+    background-color: #424242;
+    padding-top: 12px;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+
+.head-nav .cart-box::before {
+    /* 给子盒子加绝对定位 */
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    /* 字体图标必加的属性 */
+    font-family: 'iconfont';
+    /* 伪元素选择器必加的属性 */
+    content: '\e600';
+    font-size: 16px;
+}
+
+.head-nav .cart-box::after {
+    /* 给子盒子加绝对定位 */
+    position: absolute;
+    top: 40px;
+    right: 0;
+    content: '';
+    width: 300px;
+    height: 0;
+    line-height: 100px;
+    text-align: center;
+    color: #f5f5f5;
+    background-color: #fff;
+    /* 鼠标小手样式 */
+    cursor: pointer;
+    /* 动画过渡属性 */
+    transition: all .5s;
+}
+
+.head-nav .cart-box:hover {
+    background-color: #fff;
+    color: #ff6700;
+}
+
+.head-nav .cart-box:hover::after {
+    height: 100px;
+    content: '购物车中还没有商品，赶紧选购吧！';
+    color: #423f39;
+}
+
+/* 大白色背景 */
+.white-bg-region {
+    background-color: #fff;
+    height: 770px;
+}
+
+/* 头部区域 */
+header {
+    background-color: #fff;
+    height: 100px;
+}
+
+.logo a {
+    float: left;
+    width: 56px;
+    height: 56px;
+    margin-top: 22px;
+    background: url(../images/logo-mi.png) no-repeat;
+    /* 让图片的大小刚好包含整个盒子 */
+    background-size: contain;
+    /* 让字体不显示 */
+    font-size: 0;
+}
+
+header nav {
+    float: left;
+    margin-left: 176px;
+    height: 100px;
+}
+
+header nav>ul>li {
+    position: relative;
+    float: left;
+    padding: 0 10px;
+    height: 100px;
+    padding-top: 36px;
+    color: #333;
+    /* 鼠标小手样式 */
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+header nav>ul>li:hover {
+    color: #ff6700;
+}
+
+header nav>ul>li:hover .pull-down-box {
+    padding-top: 30px;
+    height: 220px;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, .3);
+
+}
+
+header .search-box {
+    position: relative;
+    float: right;
+    padding-top: 23px;
+}
+
+header .search-box input {
+    float: left;
+    width: 250px;
+    height: 50px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: 1px solid #e3e3e3;
+    border-right: 0;
+}
+
+header .search-box input:focus,
+header .search-box input:focus~button {
+    /* 文本框获得焦点后，改变边框颜色 */
+    /*  ~ 获取兄弟标签 */
+    border-color: #ff6700;
+}
+
+header .search-box input:focus~.search-down {
+    display: block;
+}
+
+header .search-box button {
+    float: left;
+    width: 50px;
+    height: 50px;
+    font-weight: 700;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 1px solid #e3e3e3;
+    cursor: pointer;
+    transition: background-color .5s, color .5s;
+}
+
+header .search-box button:hover {
+    background-color: #ff6700;
+    color: #fff;
+    border-color: #ff6700
+}
+
+header .search-box .search-down {
+    /* 隐藏盒子 */
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 251px;
+    height: 242px;
+    font-size: 12px;
+    background-color: #fff;
+    border: 1px solid #ff6700;
+    box-sizing: border-box;
+    z-index: 99;
+}
+
+header .search-box .search-down li {
+    height: 30px;
+    line-height: 30px;
+}
+
+header .search-box .search-down li a {
+    display: block;
+    color: #333;
+    padding-left: 20px;
+}
+
+header .search-box .search-down li a:hover {
+    background-color: #fafafa;
+}
+
+/* 下拉菜单区域 */
+.pull-down-box {
+    position: absolute;
+    top: 100px;
+    left: -232px;
+    width: 1226px;
+    height: 0;
+    padding-top: 0;
+    padding-left: 20px;
+    background-color: #fff;
+    overflow: hidden;
+    box-sizing: border-box;
+    /* 让其显示到箭头按钮上面 */
+    z-index: 99;
+    transition: all .5s;
+}
+
+.pull-down-box li {
+    float: left;
+}
+
+.pull-down-box li a {
+    display: block;
+    height: 180px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.pull-down-box li a img {
+    height: 60%;
+    padding: 0 20px;
+    border-right: 1px solid #e3e3e3;
+}
+
+.pull-down-box li a h4 {
+    color: #333;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+.pull-down-box li a span {
+    color: #ff6700;
+}
+
+.pull-down-box li:last-child a img {
+    border: 0;
+}
+
+/* 底部区域样式 */
+footer {
+    height: 472px;
+    background-color: #fff;
+}
+
+/* 底部区域的头部样式 */
+footer .foot-head {
+    height: 80px;
+    font-size: 16px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-left: 6px;
+}
+
+footer .foot-head ul li {
+    float: left;
+    margin-top: 28px;
+    padding: 0 20px 0 80px;
+    border-right: 1px solid #e0e0e0;
+}
+
+/* 将最右边的li的右边框去掉 */
+footer .foot-head ul li:last-child {
+    border: 0;
+}
+
+footer .foot-head ul li a {
+    /* 给父盒子加相对定位 */
+    position: relative;
+    display: block;
+    width: 140px;
+    height: 22px;
+    color: #646464;
+}
+
+footer .foot-head ul li a i {
+    /* 给字体图标加绝对定位 */
+    position: absolute;
+    top: -6px;
+    left: -30px;
+    padding-right: 5px;
+    font-size: 22px;
+}
+
+footer .foot-main dl dd a:hover,
+footer .foot-head ul li a:hover {
+    color: #ff6700;
+}
+
+footer .foot-main {
+    float: left;
+    padding-top: 40px;
+    padding-left: 160px;
+}
+
+footer .foot-main dl {
+    float: left;
+    margin-right: 90px;
+}
+
+footer .foot-main dl dt {
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+footer .foot-main dl dd {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+footer .foot-main dl dd a {
+    color: #757575;
+}
+
+/* 联系人工客服区域样式 */
+.contact-box {
+    float: left;
+    width: 150px;
+    height: 80px;
+    margin-top: 40px;
+    padding-left: 50px;
+    text-align: center;
+    border-left: 1px solid #e0e0e0;
+}
+
+.contact-box span {
+    display: block;
+    font-size: 20px;
+    color: #ff6700;
+}
+
+.contact-box em {
+    font-style: normal;
+    font-size: 12px;
+}
+
+.contact-box button {
+    width: 118px;
+    height: 28px;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #ff6700;
+    background-color: #fff;
+    border: 1px solid #ff6700;
+    cursor: pointer;
+}
+
+.contact-box button::before {
+    font-family: 'iconfont';
+    content: '\e637';
+    font-size: 14px;
+    padding-right: 3px;
+}
+
+.contact-box button:hover {
+    background-color: #ff6700;
+    color: #fff;
+}
+
+.contact-box button:hover::before {
+    color: #fff;
+}
+
+/* 底部网站信息模块样式 */
+.site-info {
+    float: left;
+    padding-top: 30px;
+    padding-left: 15px;
+    width: calc(100% - 56px);
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+.site-info ul li {
+    float: left;
+    height: 14px;
+    line-height: 14px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 5px;
+    border-right: 1px solid #b8b0b3;
+    cursor: text;
+}
+
+.site-info ul li:nth-child(15),
+.site-info ul li:nth-child(18) {
+    border: 0;
+}
+
+.site-info ul li a {
+    color: #838381;
+}
+
+.site-info ul li a:hover,
+.site-info p a:hover {
+    color: #ff6700;
+}
+
+.site-info p {
+    padding-left: 5px;
+    color: #b8b8b8;
+}
+
+.site-info p a {
+    color: #b8b8b8;
+}
+
+.site-info .info-img a {
+    display: inline-block;
+    width: 83px;
+    height: 28px;
+}
+
+.site-info .info-img a img {
+    width: 100%;
+}
+
+h3 {
+    margin-bottom: 20px !important;
+    text-align: center;
+}

@@ -1,0 +1,441 @@
+header nav {
+    margin-left: 54px;
+}
+/* 改变头部区域字体的大小 */
+header nav>ul>li {
+    position: relative;
+    font-size: 16px;
+    padding: 38px 9px 0 12px;
+}
+/* 鼠标移动到商品分类上面，不会改变其字体颜色 */
+header nav>ul>li:first-child:hover {
+    color: #333;
+}
+/* 鼠标移动到商品分类上面，让侧边框显示出来 */
+header nav>ul>li:first-child:hover aside {
+    display: block;
+}
+/* 鼠标移动到全部商品出现的侧边栏区域 */
+header nav>ul>li aside {
+    /* 先让侧边框隐藏起来 */
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: -110px;
+    width: 234px;
+    height: 450px;
+    padding-top: 25px;
+    font-size: 14px;
+    color: #555655;
+    background-color: #fff;
+    border: 1px solid #ff6700;
+    /* 让盒子不会超过设定的宽度 */
+    box-sizing: border-box;
+}
+
+header nav>ul>li aside li {
+    padding: 12px 20px 12px 30px;
+    cursor: pointer;
+}
+
+header nav>ul>li aside li::after {
+    float: right;
+    /* 使用字体图标必加的属性 */
+    font-family: 'iconfont';
+    /* 使用伪元素必加的属性 */
+    content: '\e630';
+}
+
+header nav>ul>li aside li:hover {
+    background-color: #ff6700;
+    color: #fff;
+}
+/* 首页 > 全部结果 的样式 */
+section {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    font-size: 12px;
+}
+section a {
+    margin-right: 8px;
+    color: #757575;
+}
+section a:hover {
+    color: #ff6700;
+}
+section span {
+    margin-right: 8px;
+    color: #b0b0b0;
+}
+/* 分类模块样式 */
+.classify {
+    height: 84px;
+    background-color: #fff;
+    /* 溢出隐藏 */
+    overflow: hidden;
+}
+.classify .title {
+    float: left;
+    margin-top: 33px;
+    color: #ccc;
+}
+.classify .content {
+    float: left;
+    width: calc(1226px - 184px);
+    margin-top: 15px;
+    margin-left: 80px;
+}
+.classify .content ul li {
+    float: left;
+    width: 124px;
+    height: 20px;
+    padding: 17px 12px;
+}
+.classify .content ul li a {
+    color: #424242;
+}
+.classify .content ul li:first-child a,
+.classify .content ul li a:hover {
+    color: #ff6700;
+}
+.classify .more {
+    float: left;
+    margin-top: 33px;
+    margin-left: 10px;
+    color: #828282;
+    /* 鼠标小手样式 */
+    cursor: pointer;
+}
+.classify .more::after {
+    padding-left: 5px;
+    /* 使用字体图标必加的属性 */
+    font-family: 'iconfont';
+    /* 使用伪元素必加的属性 */
+    content: '\e64a';
+}
+/* 商品模块样式 */
+.goods-box-header {
+    position: relative;
+    padding: 40px 0 20px 0;
+}
+/* 头部左侧样式 */
+.goods-box-header .left {
+    float: left;
+    color: #424242;
+}
+.goods-box-header .left ul li {
+    float: left;
+    padding: 0 30px;
+    border-right: 1px solid #e0e0e0;
+    cursor: pointer;
+}
+.goods-box-header .left ul li:first-child {
+    color: #ff6700;
+}
+.goods-box-header .left ul li:last-child {
+    border: 0;
+}
+.goods-box-header .left ul li:last-child::after {
+    font-family: 'iconfont';
+    content: '\e8d8';
+}
+.goods-box-header .left ul li:hover {
+    color: #ff6700;
+}
+/* 头部右侧区域样式 */
+.goods-box-header .right {
+    float: right;
+}
+.goods-box-header .right .address {
+    position: relative;
+    display: inline-block;
+}
+.goods-box-header .right button {
+    width: 100px;
+    height: 30px;
+    margin-left: 5px;
+    background-color: #fff;
+    border: 1px solid #e3e3e3;
+    cursor: pointer;
+    transition: all .5s;
+}
+.goods-box-header .right button:hover {
+    color: #ff6700;
+}
+/* 三角形样式 */
+.goods-box-header .right i {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 2px;
+    width: 0;
+    height: 0;
+    border-color: transparent #a9a9a9 transparent transparent;
+    border-style: solid;
+    border-width: 8px 8px 0 0;
+}
+/* 多选框样式 */
+.goods-box-header .right input[type="checkbox"] {
+    width: 18px;
+    height: 18px;   
+    vertical-align: middle;
+    margin-left: 25px;
+    margin-right: 5px;
+}
+/* 收货地址盒子的样式 */
+.goods-box-header .right .address-box {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: -170px;
+    width: 600px;
+    height: 400px;
+    padding-top: 35px;
+    padding-left: 40px;
+    background-color: #fff;
+    box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, .2); 
+    box-sizing: border-box;
+}
+/* 地址搜索框样式 */
+.goods-box-header .right .address-box input {
+    width: calc(100% - 40px);
+    height: 40px;
+    padding-left: 40px;
+    border: 1px solid #e0e0e0;
+    transition: all .5s;
+}
+/* 搜索框聚焦后，改变搜索框的边框颜色 */
+.goods-box-header .right .address-box input:focus {
+    border-color: #ff6700;
+}
+/* 地址搜索图标样式 */
+.goods-box-header .right .address-box::before {
+    position: absolute;
+    top: 35px;
+    left: 40px;
+    font-family: 'iconfont';
+    content: '\e8d6';
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #b2b2b2;
+}
+/* 手动选择地址样式 */
+.goods-box-header .right .manual {
+    width: calc(100% - 40px);
+    margin: 15px 42px 0 0;
+    text-align: right;
+    color: #b0b0b0;
+}
+.goods-box-header .right .manual:hover {
+    color: #ff6700;
+}
+/* 我的地址样式 */
+.goods-box-header .right .my-address {
+    width: calc(100% - 40px);
+    padding: 30px 0 20px 0;
+    color: #b0b0b0;
+    font-size: 16px;
+}
+/* 地址信息盒子样式 */
+.goods-box-header .right .now-login {
+    width: calc(100% - 40px);
+    text-align: center;
+    color: #7f7f7f;
+}
+/* 鼠标移动到地址按钮上，显示地址盒子模块 */
+.goods-box-header .right .address:hover .address-box {
+    display: block;
+}
+.goods-box-header .right .now-login a {
+    color: #ff6700;
+}
+/* 商品内容主体区域样式 */
+article ul li {
+    float: left;
+    width: 296px;
+    height: 430px;
+    margin: 0 14px 14px 0;
+    text-align: center;
+    background-color: #fff;
+    box-sizing: border-box;
+    transition: all .5s;
+}
+article ul li:nth-child(4n) {
+    margin-right: 0;
+}
+article ul li a {
+    display: block;
+}
+article ul li a>img {
+    width: 68%;
+    margin-top: 47px;
+}
+article ul li h4 {
+    color: #757575;
+    font-weight: 400;
+    padding: 10px 28px 0;
+    /* 先强制一行内显示文本（默认normal自动换行） */
+    white-space: nowrap;
+    /* 超出部分隐藏 */
+    overflow: hidden;
+    /* 文本用省略号替代超出的部分 */
+    text-overflow: ellipsis;
+}
+article ul li .price {
+    color: #ff6700;
+}
+article ul li .old-price {
+    color: #b0b0b0;
+    text-decoration: line-through;
+}
+article ul li .img-box img {
+    width: 34px;
+    height: 34px;
+    margin: 20px 4px 15px;
+    border: 1px solid #e0e0e0;
+}
+article ul li .img-box img:first-child {
+    border-color: #ff6700;
+    margin-right: 0;
+}
+article ul li .img-box img:hover {
+    border-color: #ff6700; 
+}
+article ul li .discount img {
+    height: 18px;
+} 
+article ul li:hover h4{
+    color: #ff6700 ; 
+}
+article ul li:hover {
+    box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, .2); 
+}
+/* 底部页数区域样式 */
+.page {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 100px;
+}   
+.page a,
+.page span {
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    margin-right: 5px;
+    color: #b0b0b0;
+}
+.page a {
+    transition: all .5s;
+}
+.page a:nth-child(2) {
+    background-color: #757575;
+    color: #fff;
+}
+.page a:hover {
+    background-color: #b0b0b0;
+    color: #fff;
+}
+/* 猜你喜欢模块样式 */
+.like-box {
+    margin-bottom: 100px;
+}
+/* 标题样式 */
+.like-box h2 {
+    position: relative;
+    margin-bottom: 30px;
+    color: #757575;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+}
+/* 猜你喜欢左右两条横线的共同样式 */
+.like-box h2::before,
+.like-box h2::after {
+    position: absolute;
+    top: 22px;
+    content: '';
+    width: 370px;
+    height: 1px;
+    background-color: #e0e0e0;
+}
+/* 猜你喜欢左边的横线 */
+.like-box h2::before {
+    left: 0;
+}
+/* 猜你喜欢右边的横线 */
+.like-box h2::after {
+    right: 0;
+}
+/* 猜你喜欢中的商品模块样式 */
+.like-box .like ul li {
+    position: relative;
+    float: left;
+    width: 234px;
+    height: 300px;
+    margin-right: 14px;
+    padding-top: 40px;
+    text-align: center;
+    background-color: #fff;
+    /* 让盒子宽、高不会发生变化 */
+    box-sizing: border-box;
+}
+/* 将最右边的盒子的右边距清零 */
+.like-box .like ul li:nth-child(5n) {
+    margin-right: 0;
+}
+.like-box .like ul li a {
+    display: block;
+}
+/* 设置图片的大小 */
+.like-box .like ul li a img {
+    width: 60%;
+}
+.like-box .like ul li a h4 {
+    padding-top: 15px;
+    font-weight: 400;
+    color: #333333;
+}
+.like-box .like ul li a .price {
+    display: block;
+    padding-top: 6px;
+    padding-bottom: 10px;
+    color: #ff6700;
+}
+.like-box .like ul li a .comment {
+    color: #767676;
+}
+/* 加入购物车按钮样式 */
+.like-box .like ul li a button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -60px;
+    width: 120px;
+    /* 将按钮高度先设为0，等鼠标经过大盒子后再给其设置高度 */
+    height: 0px;
+    color: #ff6700;
+    font-size: 12px;
+    background-color: #fff;
+    /* 边框同理 */
+    border: 0px solid #ff6700;
+    /* 溢出隐藏 */
+    overflow: hidden;
+    /* 添加动画过渡效果 */
+    transition: all .5s;
+}
+/* 经过按钮改变的样式 */
+.like-box .like ul li a button:hover {
+    background-color: #ff6700;
+    color: #fff;
+}
+/* 经过大盒子，按钮改变的样式 */
+.like-box .like ul li:hover button{
+    height: 30px;
+    border-width: 1px;
+}

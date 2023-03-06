@@ -1,0 +1,352 @@
+body {
+    background-color: #fefefe;
+    font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+}
+/* 左侧背景图片样式 */
+.left {
+    float: left;
+    width: 375px;
+    height: 900px;
+    background: url("../images/banner.5.jpg") no-repeat;
+    background-size: 100%;
+}
+/* 右侧注册内容样式 */
+.right {
+    float: left;
+    width: calc(100% - 375px);
+    height: 900px;
+}
+/* 注册内容头部样式*/
+.right header {
+    height: 40px;
+    padding: 20px 0;
+}
+/* logo样式 */
+.right header .logo a{
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px 0 20px;
+    background: url("../images/logo-mi.png") no-repeat;
+    background-size: 100%;
+    /* 让字体不显示 */
+    font-size: 0;
+}
+.right header strong {
+    float: left;
+    font-size: 25px;
+    font-weight: 500;
+}
+/* 头部右侧内容样式 */
+.right header nav {
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 28px;
+}
+.right header nav ul li {
+    float: left;
+    color: #838383;
+    margin-right: 19px;
+}
+.right header nav ul li:nth-child(4) {
+    color: #dddddd;
+}
+.right header nav ul li:last-child::after {
+    font-family: 'iconfont';
+    content: '\e6bd';
+    padding-left: 8px;
+    font-size: 12px;
+}
+.right header nav ul li a {
+    display: block;
+    color: #838383;
+}
+.right header nav ul li a:hover {
+    color: #ff6700;
+}
+.right header nav ul li:last-child:hover {
+    color: #ff6700;
+    cursor: pointer;
+}
+/* 主体内容区域模块 */
+.right article {
+    position: relative;
+    width: 450px;
+    margin: 30px auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, .3);
+}
+/* 登录 注册模块样式 */
+.right article nav ul {
+    padding: 40px 0 0 45px;
+}
+.right article nav ul li {
+    float: left;
+    font-size: 22px;
+    margin-right: 20px;
+    padding-bottom: 2px;
+}
+/* 当前页面对应的盒子加下边框跟加粗效果 */
+.right article nav ul .select {
+    border-bottom: 4px solid #ff6700;
+    font-weight: 700;
+}
+.right article nav ul li a {
+    color: #bbbbbb;
+}
+.right article nav ul .select a {
+    color: #000;
+}
+.right article form {
+    margin-left: 45px;
+    margin-top: 30px;
+}
+/* 地区盒子样式 */
+.right article form .area-box {
+    position: relative;
+    width: 360px;
+    height: 60px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* 选出来的国家 的样式 */
+.right article form .area-box span
+{
+    position: absolute;
+    bottom: 8px;
+    left: 20px;
+    font-size: 16px;
+}
+/* 国家/地区 跟 国家码 相同的样式 */
+.right article form .area-box::before,
+.right article form .code::before {
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    color: #bbbbbb;
+    font-size: 12px;
+}
+/* 国家/地区文字 */
+.right article form .area-box::before {
+    content: '国家/地区';
+}
+/* 下箭头样式 */
+.right article form .area-box::after,
+.right article form .code::after {
+    position: absolute;
+    top: 17px;
+    right: 12px;
+    font-family: 'iconfont';
+    content: '\e64a';
+    font-size: 20px;
+    color: #bbbbbb;
+}
+/* 手机号码模块样式 */
+.right article form .phone {
+    position: relative;
+    margin: 20px 0 10px 0;
+}
+.right article form .phone .code {
+    position: relative;
+    float: left;
+    width: 140px;
+    height: 60px;
+    background-color: #f9f9f9;
+    border-radius: 4px 0 0 4px;
+    /* 鼠标禁止点击样式 */
+    cursor: not-allowed;
+}
+/* 国家码文字 */
+.right article form .phone .code::before {
+    content: '国家码';
+}
+.right article form .phone .code span {
+    position: absolute;
+    bottom: 7px;
+    left: 20px;
+    font-size: 18px;
+    color: #bbbbbb;
+}
+.right article form .phone input[type="tel"] {
+    float: left;
+    width: 220px;
+    height: 60px;
+    padding: 20px 0 5px 20px;
+    background-color: #f9f9f9;
+    border-radius: 0 4px 4px 0;
+    box-sizing: border-box;
+}
+/* 手机号文字实现的样式 */
+.right article form .phone>span {
+    position: absolute;
+    top: 19px;
+    right: 195px;
+    content: '';
+    font-size: 16px;
+    color: #bbbbbb;
+    transition: all .5s;
+}
+.right article form .phone input[type="tel"]:focus~span {
+    font-size: 12px;
+    top: 8px;
+    right: 210px;
+}
+.right article form .tips {
+    font-size: 12px;
+    color: #f14645;
+    margin-bottom: 25px;
+}
+.right article form .verify {
+    position: relative;
+    width: 360px;
+    height: 60px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.right article form .verify input[type="text"] {
+    height: 100%;
+    width: 260px;
+    background-color: #f9f9f9;
+    padding: 20px 0 5px 20px;
+    box-sizing: border-box;
+}
+.right article form .verify span {
+    position: absolute;
+    top: 19px;
+    left: 20px;
+    content: '';
+    font-size: 16px;
+    color: #bbbbbb;
+    transition: all .5s;
+}
+.right article form .verify input[type="text"]:focus~span {
+    font-size: 12px;
+    top: 8px;
+}
+.right article form .verify button {
+    position: absolute;
+    top: 21px;
+    right: 18px;
+    background-color: #f9f9f9;
+    color: #ff6700;
+    cursor: pointer;
+}
+.right article form .box {
+    color: #b0b0b0;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.right article form .box input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.right article form .box a {
+    color: #333;
+}
+.right article form .register-btn {
+    width: 360px;
+    height: 60px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #ffcba9;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.right article form .no-code a {
+    font-size: 16px;
+    color: #ff6700;
+}
+.right article .other {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+.right article .other h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #aaaaaa;
+    font-weight: 400;
+}
+.right article .other span {
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+    background-color: skyblue;
+    border-radius: 50%;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.right article .other span:last-child {
+    margin-right: 0;
+}
+.right article .other span img {
+    width: 100%;
+    border-radius: 50%;
+}
+.right article i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 30px solid #ffcba9;
+    border-left: 30px solid transparent;
+    border-right: 30px solid #ffcba9;
+    border-bottom: 30px solid transparent;
+    color: #fff;
+}
+.right article i::after {
+    position: absolute;
+    top: -33px;
+    left: -16px;
+    font-family: 'iconfont';
+    content: '\e632';
+    font-style: normal;
+    font-size: 40px;
+}
+.right article i:hover {
+    border-top-color: #ff5c00;
+    border-right-color: #ff5c00;
+}
+.right article i:hover span {
+    display: block;
+}
+.right article i span {
+    display: none;
+    position: absolute;
+    top: -15px;
+    right: 40px;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #ff5c00;
+    font-style: normal;
+    color: #fff;
+    font-size: 12px;
+}
+.right article i span::before {
+    position: absolute;
+    top: 9px;
+    right: -10px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 5px solid #ff5c00;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+.right footer {
+    padding-top: 30px;
+    font-size: 12px;
+    color:  #999;
+    text-align: center;
+}

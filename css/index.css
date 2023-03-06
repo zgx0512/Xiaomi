@@ -1,0 +1,528 @@
+/* 大背景图片 */
+.bg {
+    height: 460px;
+    background: url("../images/小米13.webp") no-repeat;
+    background-size: contain;
+}
+
+/* 侧边栏区域 */
+.bg aside {
+    float: left;
+    width: 234px;
+    height: 460px;
+    padding-top: 16px;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, .2);
+    /* 让盒子不会超过设定的宽度 */
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.bg aside li {
+    padding: 12px 20px 12px 30px;
+    cursor: pointer;
+}
+
+.bg aside li::after {
+    float: right;
+    /* 使用字体图标必加的属性 */
+    font-family: 'iconfont';
+    /* 使用伪元素必加的属性 */
+    content: '\e630';
+}
+
+.bg aside li:hover {
+    background-color: #ff6700;
+}
+
+/* 大背景右侧样式 */
+.bg .bg-right {
+    position: relative;
+    float: left;
+    width: calc(100% - 234px);
+    height: 460px;
+}
+
+/* 左右箭头样式 */
+.bg .bg-right .left-arrow,
+.bg .bg-right .right-arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -69px;
+    width: 41px;
+    height: 69px;
+    line-height: 69px;
+    color: #d9d9d9;
+    font-size: 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.bg .bg-right .left-arrow {
+    left: 0;
+    padding-left: 2px;
+}
+
+.bg .bg-right .right-arrow {
+    right: 0;
+    padding-left: 8px;
+}
+
+.bg .bg-right .left-arrow:hover,
+.bg .bg-right .right-arrow:hover {
+    background-color: #7f7f7f;
+    color: #fff;
+}
+
+.bg .bg-right .round-box {
+    position: absolute;
+    bottom: 25px;
+    right: 28px;
+}
+
+.bg .bg-right .round-box ul li {
+    float: left;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    border: 2px solid #b4b3b1;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.bg .bg-right .round-box ul li:hover {
+    background-color: rgba(255, 255, 255, .4);
+}
+.bg .bg-right .round-box ul .select {
+    background-color: rgba(255, 255, 255, .4);
+}
+/* 大背景下面盒子区域的样式 */
+article {
+    height: 170px;
+    margin-top: 15px !important;
+}
+
+article>ul>li {
+    /* 让盒子浮动，使其左对齐排版 */
+    float: left;
+    width: 316px;
+    height: 170px;
+    margin-right: 14px;
+    transition: all .5s;
+}
+
+/* 将第一个小盒子宽度单独设置 */
+article>ul>li:first-child {
+    width: 234px;
+}
+
+/* 清除掉最后一个盒子的右外边距 */
+article>ul>li:last-child {
+    margin-right: 0;
+}
+
+article .fast {
+    width: 100%;
+    height: 100%;
+    background-color: #5f5750;
+}
+
+article .fast li {
+    position: relative;
+    float: left;
+    width: 76px;
+    height: 82px;
+    padding-top: 34px;
+    padding-left: 7px;
+    text-align: center;
+    /* 让盒子的宽度怎么变化都不会超过设定的宽度 */
+    box-sizing: border-box;
+}
+
+article .fast li a {
+    display: block;
+    width: 70px;
+    height: 64px;
+    color: #cecbc9;
+    font-size: 12px;
+}
+
+article .fast li a:hover {
+    color: #fff;
+}
+
+/* 图标样式 */
+article .fast li a i {
+    position: absolute;
+    top: 20px;
+    left: 7px;
+    width: 70px;
+    height: 24px;
+    font-size: 25px;
+}
+
+/* 利用伪元素生成左边框和上边框 */
+article .fast li::before,
+article .fast li::after {
+    position: absolute;
+    content: '';
+    background-color: #665e57;
+}
+
+article .fast li::before {
+    top: 10px;
+    left: 3px;
+    width: 1px;
+    height: 70px;
+}
+
+article .fast li::after {
+    top: 3px;
+    left: 6px;
+    width: 70px;
+    height: 1px;
+}
+
+/* 让图片宽度跟盒子大小一样 */
+article>ul>li>a img,
+.container .ct-left img {
+    width: 100%;
+}
+
+.container .ct-left a:hover,
+.container .ct-right ul li a:hover,
+article>ul>li:hover {
+    box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, .2);
+}
+
+/* 横幅广告盒子样式 */
+.img-box {
+    height: 120px;
+    margin-top: 25px;
+}
+
+.img-box img {
+    width: 100%;
+}
+
+/* 主体区域样式 */
+.container {
+    margin-top: 25px;
+}
+
+/* 布局类似区域的头部样式 */
+.container .ct-head {
+    height: 58px;
+    line-height: 58px;
+}
+
+/* 标题 */
+.container .ct-head h4 {
+    float: left;
+    font-size: 22px;
+    font-weight: 300;
+    color: #333;
+}
+
+/* 头部右侧 */
+.container .ct-head a {
+    position: relative;
+    float: right;
+    font-size: 16px;
+    color: #333;
+    margin-right: 30px;
+}
+
+.container .ct-head .right-arrow::after {
+    position: absolute;
+    top: 18px;
+    right: -28px;
+    /* 使用字体图标必加的属性 */
+    font-family: 'iconfont';
+    /* 使用伪元素必加的属性 */
+    content: '\e630';
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    background-color: #b0b0b0;
+    border-radius: 50%;
+}
+
+.container .ct-head a:hover {
+    color: #ff6700;
+}
+
+.container .ct-head .right-arrow:hover::after {
+    background-color: #ff6700;
+}
+
+/* 左侧区域样式 */
+.container .ct-left {
+    float: left;
+    width: 234px;
+    height: 614px;
+}
+
+.container .ct-left a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+}
+
+/* 右侧区域样式 */
+.container .ct-right {
+    float: left;
+    width: calc(100% - 234px);
+    height: 614px;
+}
+
+.container .ct-right ul li {
+    float: left;
+    width: 234px;
+    height: 300px;
+    margin-left: 14px;
+    background-color: #fff;
+}
+
+/* 选出前4位孩子 */
+.container .ct-right ul li:nth-child(-n+4) {
+    margin-bottom: 14px;
+}
+
+.container .ct-right ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: all .5s;
+}
+
+.container .ct-right ul li a img {
+    width: 80%;
+    margin-top: 15px;
+}
+
+.container .ct-right ul li a h4 {
+    margin-top: 10px;
+    color: #333;
+    font-weight: 400;
+    /* 先强制一行内显示文本（默认normal自动换行） */
+    white-space: nowrap;
+    /* 超出部分隐藏 */
+    overflow: hidden;
+    /* 文本用省略号替代超出的部分 */
+    text-overflow: ellipsis;
+}
+
+.container .ct-right ul li a p {
+    color: #b0b0b0;
+    font-size: 12px;
+    margin-bottom: 10px;
+    /* 先强制一行内显示文本（默认normal自动换行） */
+    white-space: nowrap;
+    /* 超出部分隐藏 */
+    overflow: hidden;
+    /* 文本用省略号替代超出的部分 */
+    text-overflow: ellipsis;
+}
+
+.container .ct-right ul li a .price {
+    color: #ff6700;
+}
+
+/* 智能穿戴 笔记本 家电区域特有的样式 */
+/* 头部右侧样式 */
+.container .ct-head .head-right a {
+    height: 42px;
+}
+
+.container .ct-head .head-right a:last-child {
+    color: #ff6700;
+    border-bottom: 2px solid #ff6700;
+}
+
+.container .ct-head .head-right a:nth-child(n+1):hover {
+    color: #ff6700;
+    border-bottom: 2px solid #ff6700;
+}
+
+.container .ct-head .head-right a:nth-child(n+1):hover~a:last-child {
+    color: #333;
+    border: 0;
+}
+
+/* 旧价格样式 */
+.old-price {
+    padding-left: 5px;
+    color: #b0b0b0;
+    text-decoration: line-through;
+}
+
+/* 最后一个li内容的样式 */
+.container .ct-right ul .last {
+    background-color: transparent;
+}
+
+.container .ct-right ul .last a {
+    padding-top: 30px;
+    width: 100%;
+    height: 47%;
+    background-color: #fff;
+}
+
+.container .ct-right ul .last a:last-child {
+    position: relative;
+    margin-top: 18px;
+}
+
+.container .ct-right ul .last a .text-box {
+    float: left;
+    width: 105px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.container .ct-right ul .last a .text-box h4 {
+    margin-bottom: 5px;
+}
+
+.container .ct-right ul .last a img {
+    float: right;
+    width: 40%;
+    margin: 0;
+}
+
+.container .ct-right ul .last a .text-box h2 {
+    margin-top: 17px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* 生成 查看更多 箭头样式 */
+.container .ct-right ul .last a:last-child::after {
+    position: absolute;
+    top: 45px;
+    right: 30px;
+    font-family: 'iconfont';
+    content: '\e65d';
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #ff6700;
+    font-size: 25px;
+    border: 3px solid #ff6700;
+    border-radius: 50%;
+}
+
+/* 家电区域特有的样式 */
+.container .ct-left ul li a {
+    display: block;
+    width: 100%;
+    height: 300px;
+    transition: all .5s;
+}
+
+.container .ct-left ul li:last-child a {
+    margin-top: 14px;
+}
+/* 侧彼岸固定导航栏样式 */
+.fix-sidenav {
+    position: fixed;
+    top: 165px;
+    left: 50%;
+    padding-left: calc(405px);
+    /* margin-left: 614px; */
+    width: 28px;
+    margin-left: 200px;
+}
+.fix-sidenav ul li {
+    position: relative;
+    height: 43px;
+    line-height: 44px;
+    border-bottom: 1px solid #f5f5f5;
+    text-align: center;
+    background-color: #fff;
+}
+.fix-sidenav ul li:nth-child(5) {
+    margin-bottom: 20px;
+}
+.fix-sidenav ul li a {
+    display: block;
+    font-size: 20px;
+    color: #999999;
+}
+.fix-sidenav .triangle {
+    display: none;
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-color: transparent transparent transparent white;
+    border-width: 8px;
+    border-style: solid;
+}
+.fix-sidenav .scan-code {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 36px;
+    width: 120px;
+    height: 170px;
+    padding-top: 18px;
+    background-color: #fff;
+}
+.fix-sidenav .scan-code img {
+    width: 80%;
+}
+.fix-sidenav .scan-code p {
+    padding: 0 20px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.fix-sidenav .user,
+.fix-sidenav .serve,
+.fix-sidenav .service,
+.fix-sidenav .shopcar,
+.fix-sidenav .return {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 36px;
+    width: 76px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #fff;
+}
+.fix-sidenav .shopcar {
+    width: 90px;
+    padding-left: 7px;
+    box-sizing: border-box;
+}
+.fix-sidenav .return {
+    width: 60px;
+}
+.fix-sidenav ul li a:hover {
+    color: #ff6700;
+}
+.fix-sidenav ul li a:hover .triangle,
+.fix-sidenav ul li a:hover .scan-code,
+.fix-sidenav ul li a:hover .user,
+.fix-sidenav ul li a:hover .serve,
+.fix-sidenav ul li a:hover .service,
+.fix-sidenav ul li a:hover .shopcar,
+.fix-sidenav ul li a:hover .return {
+    display: block;
+    color: #999;
+}
