@@ -434,10 +434,10 @@ article>ul>li:hover {
 .container .ct-left ul li:last-child a {
     margin-top: 14px;
 }
-/* 侧彼岸固定导航栏样式 */
+/* 侧边固定导航栏样式 */
 .fix-sidenav {
     position: fixed;
-    top: 165px;
+    bottom: 50px;
     left: 50%;
     padding-left: calc(405px);
     /* margin-left: 614px; */
@@ -452,8 +452,9 @@ article>ul>li:hover {
     text-align: center;
     background-color: #fff;
 }
-.fix-sidenav ul li:nth-child(5) {
-    margin-bottom: 20px;
+.fix-sidenav ul li:nth-child(6) {
+    display: none;
+    margin-top: 20px;
 }
 .fix-sidenav ul li a {
     display: block;
