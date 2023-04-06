@@ -4,7 +4,7 @@ window.addEventListener('load', function () {
     // 文本框点击后，推荐列表 显示
     search.addEventListener('click', function (e) {
         searchDown.style.display = 'block'
-        // 阻止冒泡，使其不会触发到文档的点击方法
+        // 阻止冒泡，使其不会触发到文档的点击事件上去
         e.stopPropagation()
     })
     // 点击文本框以外的所有地方，推荐列表 隐藏
