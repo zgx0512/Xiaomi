@@ -203,10 +203,6 @@ header .search-box input:focus~button {
     border-color: #ff6700;
 }
 
-header .search-box input:focus~.search-down {
-    display: block;
-}
-
 header .search-box button {
     float: left;
     width: 50px;
